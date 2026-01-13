@@ -56,38 +56,38 @@ except FileNotFoundError:
 
 class CustomerInput(BaseModel):
     """Input schema for customer data"""
-    customer_age: float = Field(..., description="Customer age in years", ge=18, le=100)
-    dependent_count: int = Field(..., description="Number of dependents", ge=0, le=10)
-    months_on_book: int = Field(..., description="Period of relationship with bank (months)", ge=0)
-    total_relationship_count: int = Field(..., description="Total number of products held", ge=1, le=6)
-    months_inactive_12_mon: int = Field(..., description="Number of months inactive in last 12 months", ge=0, le=12)
-    contacts_count_12_mon: int = Field(..., description="Number of contacts in last 12 months", ge=0)
-    credit_limit: float = Field(..., description="Credit limit on credit card", ge=0)
-    total_revolving_bal: float = Field(..., description="Total revolving balance", ge=0)
-    avg_open_to_buy: float = Field(..., description="Average open to buy credit line", ge=0)
-    total_amt_chng_q4_q1: float = Field(..., description="Change in transaction amount Q4 vs Q1", ge=0)
-    total_trans_amt: float = Field(..., description="Total transaction amount in last 12 months", ge=0)
-    total_trans_ct: int = Field(..., description="Total transaction count in last 12 months", ge=0)
-    total_ct_chng_q4_q1: float = Field(..., description="Change in transaction count Q4 vs Q1", ge=0)
-    avg_utilization_ratio: float = Field(..., description="Average card utilization ratio", ge=0.0, le=1.0)
+    Customer_Age: float = Field(..., description="Customer age in years", ge=18, le=100)
+    Dependent_count: int = Field(..., description="Number of dependents", ge=0, le=10)
+    Months_on_book: int = Field(..., description="Period of relationship with bank (months)", ge=0)
+    Total_Relationship_Count: int = Field(..., description="Total number of products held", ge=1, le=6)
+    Months_Inactive_12_mon: int = Field(..., description="Number of months inactive in last 12 months", ge=0, le=12)
+    Contacts_Count_12_mon: int = Field(..., description="Number of contacts in last 12 months", ge=0)
+    Credit_Limit: float = Field(..., description="Credit limit on credit card", ge=0)
+    Total_Revolving_Bal: float = Field(..., description="Total revolving balance", ge=0)
+    Avg_Open_To_Buy: float = Field(..., description="Average open to buy credit line", ge=0)
+    Total_Amt_Chng_Q4_Q1: float = Field(..., description="Change in transaction amount Q4 vs Q1", ge=0)
+    Total_Trans_Amt: float = Field(..., description="Total transaction amount in last 12 months", ge=0)
+    Total_Trans_Ct: int = Field(..., description="Total transaction count in last 12 months", ge=0)
+    Total_Ct_Chng_Q4_Q1: float = Field(..., description="Change in transaction count Q4 vs Q1", ge=0)
+    Avg_Utilization_Ratio: float = Field(..., description="Average card utilization ratio", ge=0.0, le=1.0)
 
     class Config:
         schema_extra = {
             "example": {
-                "customer_age": 45,
-                "dependent_count": 2,
-                "months_on_book": 36,
-                "total_relationship_count": 3,
-                "months_inactive_12_mon": 1,
-                "contacts_count_12_mon": 2,
-                "credit_limit": 10000.0,
-                "total_revolving_bal": 1500.0,
-                "avg_open_to_buy": 8500.0,
-                "total_amt_chng_q4_q1": 0.8,
-                "total_trans_amt": 5000.0,
-                "total_trans_ct": 50,
-                "total_ct_chng_q4_q1": 0.7,
-                "avg_utilization_ratio": 0.3
+                "Customer_Age": 45,
+                "Dependent_count": 2,
+                "Months_on_book": 36,
+                "Total_Relationship_Count": 3,
+                "Months_Inactive_12_mon": 1,
+                "Contacts_Count_12_mon": 2,
+                "Credit_Limit": 10000.0,
+                "Total_Revolving_Bal": 1500.0,
+                "Avg_Open_To_Buy": 8500.0,
+                "Total_Amt_Chng_Q4_Q1": 0.8,
+                "Total_Trans_Amt": 5000.0,
+                "Total_Trans_Ct": 50,
+                "Total_Ct_Chng_Q4_Q1": 0.7,
+                "Avg_Utilization_Ratio": 0.3
             }
         }
 
@@ -170,20 +170,20 @@ def predict_churn(customer: CustomerInput):
     try:
         # Prepare features in correct order
         features = np.array([[
-            customer.customer_age,
-            customer.dependent_count,
-            customer.months_on_book,
-            customer.total_relationship_count,
-            customer.months_inactive_12_mon,
-            customer.contacts_count_12_mon,
-            customer.credit_limit,
-            customer.total_revolving_bal,
-            customer.avg_open_to_buy,
-            customer.total_amt_chng_q4_q1,
-            customer.total_trans_amt,
-            customer.total_trans_ct,
-            customer.total_ct_chng_q4_q1,
-            customer.avg_utilization_ratio
+            customer.Customer_Age,
+            customer.Dependent_count,
+            customer.Months_on_book,
+            customer.Total_Relationship_Count,
+            customer.Months_Inactive_12_mon,
+            customer.Contacts_Count_12_mon,
+            customer.Credit_Limit,
+            customer.Total_Revolving_Bal,
+            customer.Avg_Open_To_Buy,
+            customer.Total_Amt_Chng_Q4_Q1,
+            customer.Total_Trans_Amt,
+            customer.Total_Trans_Ct,
+            customer.Total_Ct_Chng_Q4_Q1,
+            customer.Avg_Utilization_Ratio
         ]])
 
         # Handle case where model expects different number of features

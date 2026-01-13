@@ -300,20 +300,20 @@ def main():
             else:
                 # Prepare payload
                 payload = {
-                    "customer_age": customer_age,
-                    "dependent_count": dependent_count,
-                    "months_on_book": months_on_book,
-                    "total_relationship_count": total_relationship_count,
-                    "months_inactive_12_mon": months_inactive,
-                    "contacts_count_12_mon": contacts_count,
-                    "credit_limit": credit_limit,
-                    "total_revolving_bal": total_revolving_bal,
-                    "avg_open_to_buy": avg_open_to_buy,
-                    "total_amt_chng_q4_q1": total_amt_chng_q4_q1,
-                    "total_trans_amt": total_trans_amt,
-                    "total_trans_ct": total_trans_ct,
-                    "total_ct_chng_q4_q1": total_ct_chng_q4_q1,
-                    "avg_utilization_ratio": avg_utilization
+                    "Customer_Age": customer_age,
+                    "Dependent_count": dependent_count,
+                    "Months_on_book": months_on_book,
+                    "Total_Relationship_Count": total_relationship_count,
+                    "Months_Inactive_12_mon": months_inactive,
+                    "Contacts_Count_12_mon": contacts_count,
+                    "Credit_Limit": credit_limit,
+                    "Total_Revolving_Bal": total_revolving_bal,
+                    "Avg_Open_To_Buy": avg_open_to_buy,
+                    "Total_Amt_Chng_Q4_Q1": total_amt_chng_q4_q1,
+                    "Total_Trans_Amt": total_trans_amt,
+                    "Total_Trans_Ct": total_trans_ct,
+                    "Total_Ct_Chng_Q4_Q1": total_ct_chng_q4_q1,
+                    "Avg_Utilization_Ratio": avg_utilization
                 }
 
                 # Make prediction

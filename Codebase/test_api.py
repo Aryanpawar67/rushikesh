@@ -64,20 +64,20 @@ def test_prediction():
 
     # Sample customer data
     payload = {
-        "customer_age": 45,
-        "dependent_count": 2,
-        "months_on_book": 36,
-        "total_relationship_count": 3,
-        "months_inactive_12_mon": 1,
-        "contacts_count_12_mon": 2,
-        "credit_limit": 10000.0,
-        "total_revolving_bal": 1500.0,
-        "avg_open_to_buy": 8500.0,
-        "total_amt_chng_q4_q1": 0.8,
-        "total_trans_amt": 5000.0,
-        "total_trans_ct": 50,
-        "total_ct_chng_q4_q1": 0.7,
-        "avg_utilization_ratio": 0.3
+        "Customer_Age": 45,
+        "Dependent_count": 2,
+        "Months_on_book": 36,
+        "Total_Relationship_Count": 3,
+        "Months_Inactive_12_mon": 1,
+        "Contacts_Count_12_mon": 2,
+        "Credit_Limit": 10000.0,
+        "Total_Revolving_Bal": 1500.0,
+        "Avg_Open_To_Buy": 8500.0,
+        "Total_Amt_Chng_Q4_Q1": 0.8,
+        "Total_Trans_Amt": 5000.0,
+        "Total_Trans_Ct": 50,
+        "Total_Ct_Chng_Q4_Q1": 0.7,
+        "Avg_Utilization_Ratio": 0.3
     }
 
     print(f"Payload: {json.dumps(payload, indent=2)}")
