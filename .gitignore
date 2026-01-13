@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model artifacts (uncomment if you don't want to commit large model files)
+# *.pkl
+# *.joblib
+
+# Data files (large CSVs - uncomment if you don't want to commit data)
+# *.csv
+
+# Logs
+*.log
+
+# Streamlit
+.streamlit/
+
+# Environment variables
+.env
+.env.local
